@@ -1,0 +1,215 @@
+/* FabricAI Custom Dark Mode & Glassmorphism Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #0b0f19;
+    --card-bg: rgba(17, 24, 39, 0.75);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+/* Global Font & Theme overrides */
+html, body, [class*="st-"] {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+.stApp {
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 40%, #090d16 100%);
+    background-attachment: fixed;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(16px);
+    border-right: 1px solid var(--border-color);
+}
+
+[data-testid="stSidebar"] .stMarkdown h1, 
+[data-testid="stSidebar"] .stMarkdown h2, 
+[data-testid="stSidebar"] .stMarkdown h3 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Hero Section Container */
+.hero-container {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+/* Stat Cards Grid */
+.stat-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
+}
+
+.stat-val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Glassmorphic Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom Badges */
+.badge-hole {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.badge-horizontal {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.badge-vertical {
+    background: rgba(168, 85, 247, 0.2);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.badge-normal {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Streamlit Button Styling */
+.stButton > button {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.6rem 1.8rem !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5) !important;
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+}
+
+/* File Uploader override */
+[data-testid="stFileUploader"] {
+    background: rgba(30, 41, 59, 0.5);
+    border: 2px dashed rgba(96, 165, 250, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: #60a5fa;
+    background: rgba(30, 41, 59, 0.7);
+}
+
+/* Custom Tab Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 12px;
+    background-color: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 44px;
+    white-space: pre;
+    border-radius: 10px;
+    background-color: rgba(30, 41, 59, 0.6);
+    color: var(--text-secondary);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+}
