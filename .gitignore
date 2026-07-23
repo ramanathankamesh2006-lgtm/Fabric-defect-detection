@@ -1,3 +1,10 @@
+# Environment Variables (Secrets & Credentials)
+.env
+.env.local
+.env.development
+.env.production
+.env.*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
